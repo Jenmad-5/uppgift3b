@@ -1,0 +1,31 @@
+ody {
+    font-family: Georgia, serif;
+    margin: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.support-form input[type="text"],
+.support-form select,
+.support-form textarea {
+    width: 250px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+.support-form textarea {
+    width: 400px;
+}
+
+button {
+    padding: 5px 12px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+label {
+    font-size: 16px;

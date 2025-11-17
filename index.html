@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<title>Supportformulär</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Supportformulär</h1>
+<p>Här kan du skicka ett ärende till vår supportavdelning.</p>
+
+<form action="#" method="post" class="support-form">
+
+    <label>Ditt namn:<br>
+        <input type="text" name="namn">
+    </label><br><br>
+
+    <label>Telefon:<br>
+        <input type="text" name="telefon">
+    </label><br><br>
+
+    <label>Prioritet:<br>
+        <select name="prioritet">
+            <option>Låg</option>
+            <option>Medel</option>
+            <option>Hög</option>
+        </select>
+    </label><br><br>
+
+    <label>Tilldela till ort:</label><br>
+    <label><input type="radio" name="ort" value="Göteborg" checked> Göteborg</label><br>
+    <label><input type="radio" name="ort" value="Stockholm"> Stockholm</label><br>
+    <label><input type="radio" name="ort" value="Umeå"> Umeå</label><br>
+    <label><input type="radio" name="ort" value="Luleå"> Luleå</label><br><br>
+
+    <label>Kategori:<br>
+        <select name="kategori">
+            <option>Fakturering</option>
+            <option>Support</option>
+            <option>Telefoni</option>
+            <option>Övrigt</option>
+        </select>
+    </label><br><br>
+
+    <label>Rubrik:<br>
+        <input type="text" name="rubrik">
+    </label><br><br>
+
+    <label>Beskrivning<br>
+        <textarea name="beskrivning" rows="7" cols="50"></textarea>
+    </label><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+<hr><br>
+
+<h1>Supportärende</h1>
+
+<p>Ditt ärende har nu registrerats, vi återkopplar så snart vi kan.</p>
+
+<p><strong>Informationen vi fått är följande:</strong></p>
+
+<p><strong>Namn:</strong> Susanne Fahlman<br>
+<strong>Prioritet:</strong> Hög<br>
+<strong>Telefon:</strong> 5706<br>
+<strong>Ort:</strong> Luleå<br>
+<strong>Kategori:</strong> Telefoni<br>
+<strong>Rubrik:</strong> För många samtal<br>
+<strong>Beskrivning:</strong> Jag får alldeles för många telefonsamtal, gör något åt det!</p>
+
+<p>Om man inte får information vid alla rubriker innebär det att man inte har fyllt i alla fält eller att det är något fel i din kod. Det som händer när man klickar på Submit är att formulärets data skickas till en php-sida som tolkar data och presenterar resultatet. Denna php-sida är klar och fungerande så den biten behöver du inte bry dig om.</p>
+
+</body>
+</html>
