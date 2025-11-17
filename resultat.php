@@ -1,13 +1,3 @@
-<?php
-// Ta emot formulärdata
-$namn = $_POST['namn'] ?? '';
-$telefon = $_POST['telefon'] ?? '';
-$prioritet = $_POST['prioritet'] ?? '';
-$ort = $_POST['ort'] ?? '';
-$kategori = $_POST['kategori'] ?? '';
-$rubrik = $_POST['rubrik'] ?? '';
-$beskrivning = $_POST['beskrivning'] ?? '';
-?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
