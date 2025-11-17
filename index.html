@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Supportformulär</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Supportformulär</h1>
-<p>Här kan du skicka ett ärende till vår supportavdelning.</p>
+<main class="container">
+  <h1>Supportformulär</h1>
+  <p>Här kan du skicka ett ärende till vår supportavdelning.</p>
 
-<form action="resultat.php" method="post" class="support-form">
+  <form action="support.php" method="post" class="form">
+    <label for="namn">Ditt namn:</label>
+    <input id="namn" name="namn" type="text" required>
 
-    <label>Ditt namn:<br>
-        <input type="text" name="namn" required>
-    </label><br><br>
+    <label for="telefon">Telefon:</label>
+    <input id="telefon" name="telefon" type="text" required>
 
-    <label>Telefon:<br>
-        <input type="text" name="telefon" required>
-    </label><br><br>
+    <label for="prioritet">Prioritet:</label>
+    <select id="prioritet" name="prioritet">
+      <option value="Låg">Låg</option>
+      <option value="Normal">Normal</option>
+      <option value="Hög">Hög</option>
+    </select>
 
-    <label>Prioritet:<br>
-        <select name="prioritet">
-            <option>Låg</option>
-            <option>Medel</option>
-            <option>Hög</option>
-        </select>
-    </label><br><br>
+    <fieldset class="radio-group">
+      <legend>Tilldela till ort:</legend>
+      <label><input type="radio" name="ort" value="Göteborg" checked> Göteborg</label>
+      <label><input type="radio" name="ort" value="Stockholm"> Stockholm</label>
+      <label><input type="radio" name="ort" value="Umeå"> Umeå</label>
+      <label><input type="radio" name="ort" value="Luleå"> Luleå</label>
+    </fieldset>
 
-    <label>Tilldela till ort:</label><br>
-    <label><input type="radio" name="ort" value="Göteborg" checked> Göteborg</label><br>
-    <label><input type="radio" name="ort" value="Stockholm"> Stockholm</label><br>
-    <label><input type="radio" name="ort" value="Umeå"> Umeå</label><br>
-    <label><input type="radio" name="ort" value="Luleå"> Luleå</label><br><br>
+    <label for="kategori">Kategori</label>
+    <select id="kategori" name="kategori">
+      <option value="Fakturering">Fakturering</option>
+      <option value="Teknik">Teknik</option>
+      <option value="Telefoni">Telefoni</option>
+      <option value="Övrigt">Övrigt</option>
+    </select>
 
-    <label>Kategori:<br>
-        <select name="kategori">
-            <option>Fakturering</option>
-            <option>Support</option>
-            <option>Telefoni</option>
-            <option>Övrigt</option>
-        </select>
-    </label><br><br>
+    <label for="rubrik">Rubrik</label>
+    <input id="rubrik" name="rubrik" type="text" required>
 
-    <label>Rubrik:<br>
-        <input type="text" name="rubrik" required>
-    </label><br><br>
+    <label for="beskrivning">Beskrivning</label>
+    <textarea id="beskrivning" name="beskrivning" rows="8" required></textarea>
 
-    <label>Beskrivning<br>
-        <textarea name="beskrivning" rows="7" cols="50" required></textarea>
-    </label><br><br>
-
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-
-</form>
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</main>
 
 </body>
 </html>
+
