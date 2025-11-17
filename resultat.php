@@ -1,3 +1,5 @@
+<?php
+// Ta emot formulärdata
 $namn = $_POST['namn'] ?? '';
 $telefon = $_POST['telefon'] ?? '';
 $prioritet = $_POST['prioritet'] ?? '';
@@ -30,5 +32,12 @@ $beskrivning = $_POST['beskrivning'] ?? '';
 <strong>Rubrik:</strong> <?= htmlspecialchars($rubrik) ?><br>
 <strong>Beskrivning:</strong> <?= nl2br(htmlspecialchars($beskrivning)) ?>
 </p>
+
+<p>
+Om man inte får information vid alla rubriker innebär det att man inte har fyllt i alla fält eller att det är något fel i din kod.
+Det som händer när man klickar på Submit är att formulärets data skickas till en php-sida som tolkar data och presenterar resultatet.
+Denna php-sida är klar och fungerande så den biten behöver du inte bry dig om.
+</p>
+
 </body>
 </html>

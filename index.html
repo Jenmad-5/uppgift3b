@@ -10,14 +10,14 @@
 <h1>Supportformulär</h1>
 <p>Här kan du skicka ett ärende till vår supportavdelning.</p>
 
-<form action="#" method="post" class="support-form">
+<form action="resultat.php" method="post" class="support-form">
 
     <label>Ditt namn:<br>
-        <input type="text" name="namn">
+        <input type="text" name="namn" required>
     </label><br><br>
 
     <label>Telefon:<br>
-        <input type="text" name="telefon">
+        <input type="text" name="telefon" required>
     </label><br><br>
 
     <label>Prioritet:<br>
@@ -44,11 +44,11 @@
     </label><br><br>
 
     <label>Rubrik:<br>
-        <input type="text" name="rubrik">
+        <input type="text" name="rubrik" required>
     </label><br><br>
 
     <label>Beskrivning<br>
-        <textarea name="beskrivning" rows="7" cols="50"></textarea>
+        <textarea name="beskrivning" rows="7" cols="50" required></textarea>
     </label><br><br>
 
     <button type="submit">Submit</button>
@@ -56,6 +56,5 @@
 
 </form>
 
-<hr><br>
 </body>
 </html>
