@@ -1,6 +1,6 @@
 <?php
-// support.php
-
+//support.php visar information från formuläret
+//content type visar på att det är html
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Content-Type: text/html; charset=utf-8");
     echo "<!doctype html><html lang='sv'><head><meta charset='utf-8'><title>Fel</title></head><body>";
@@ -8,10 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Funktion för säker HTML-output
+//funktion som gör text säkrare att visa i html
 function esc($s){ return htmlspecialchars($s, ENT_QUOTES, 'utf-8'); }
 
-// Hämta formulärdata
+//hämtar alla värden från formuläret
 $namn = esc($_POST['namn'] ?? '');
 $telefon = esc($_POST['telefon'] ?? '');
 $prioritet = esc($_POST['prioritet'] ?? '');
@@ -26,9 +26,11 @@ $beskrivning = esc($_POST['beskrivning'] ?? '');
 <head>
     <meta charset="utf-8">
     <title>Supportärende</title>
+    <!--länkar till styling i css för php filen-->
     <link rel="stylesheet" href="style.php.css">
 </head>
 <body>
+<!--container för hela support sidan-->
 <div id="support-container">
 
     <h1>Supportärende</h1>
@@ -36,13 +38,14 @@ $beskrivning = esc($_POST['beskrivning'] ?? '');
 
     <h3>Informationen vi fått är följande:</h3>
     <p>
-        <b>Namn:</b> <?php echo $namn; ?><br>
-        <b>Prioritet:</b> <?php echo $prioritet; ?><br>
-        <b>Telefon:</b> <?php echo $telefon; ?><br>
-        <b>Ort:</b> <?php echo $ort; ?><br>
-        <b>Kategori:</b> <?php echo $kategori; ?><br>
-        <b>Rubrik:</b> <?php echo $rubrik; ?><br>
-        <b>Beskrivning:</b> <?php echo nl2br($beskrivning); ?><br>
+<!--denna del visar all information som skickades i formuläret-->
+        <b>Namn:</b> <?php echo $namn; ?>
+        <b>Prioritet:</b> <?php echo $prioritet; ?>
+        <b>Telefon:</b> <?php echo $telefon; ?>
+        <b>Ort:</b> <?php echo $ort; ?>
+        <b>Kategori:</b> <?php echo $kategori; ?>
+        <b>Rubrik:</b> <?php echo $rubrik; ?>
+        <b>Beskrivning:</b> <?php echo nl2br($beskrivning); ?>
     </p>
 
 </div>

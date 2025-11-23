@@ -1,10 +1,11 @@
-/* ---------- CSS för support.php ---------- */
-
+/*css för php*/
+/*body är grundstilen för sidan*/
 body {
     font-family: Arial, sans-serif;
     color: #000;
 }
 
+/*support container innehåller allt innehåll på support.php*/
 #support-container {
     width: 700px;
     margin: 20px auto;
@@ -14,7 +15,6 @@ body {
 #support-container h1 {
     font-family: "Times New Roman", Georgia, serif;
     font-size: 36px;
-    margin: 0 0 8px 0;
 }
 
 #support-container h3 {

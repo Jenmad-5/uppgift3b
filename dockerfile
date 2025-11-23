@@ -1,18 +1,18 @@
-# Använd officiell PHP med Apache
+#använd officiell PHP med Apache
 FROM php:8.2-apache
 
-# Kopiera alla filer från projektmappen till Apache root
+#kopiera alla filer från projektmappen till Apache root
 COPY . /var/www/html/
 
-# Se till att Apache använder index.php och index.html som startsida
+#se till att Apache använder index.php och index.html som startsida
 RUN echo "DirectoryIndex index.php index.html" >> /etc/apache2/apache2.conf
 
-# Ge rättigheter till Apache
+#ge rättigheter till Apache
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
-# Exponera port 80
+#berättar för docker att servern körs på port 80
 EXPOSE 80
 
-# Starta Apache i förgrunden
+#starta Apache i förgrunden
 CMD ["apache2-foreground"]
