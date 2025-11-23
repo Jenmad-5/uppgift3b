@@ -1,30 +1,13 @@
-/* style.css */
-:root{
- --content-width:480px;
- --body-font: "Times New Roman", Georgia, serif;
- --ui-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
 
 body{
- font-family: var(--ui-font);
- background: #fff;
- color: #000;
  margin: 20px;
  display: flex;
  justify-content: center;
 }
 
-/*allt på sidan*/
-.container{
- width: var(--content-width);
-}
-
 
 h1{
- font-family: var(--body-font);
  font-size: 36px;
- margin: 0 0 8px 0;
 }
 
 
@@ -37,7 +20,6 @@ h1{
 
 /* Form layout */
 label{
- font-weight: normal;
  display:block;
  margin-top: 12px;
 }
@@ -72,7 +54,6 @@ textarea{
 
 .radiogrupp label{
  display:block;
- font-weight: normal;
  margin-top:6px;
 }
 
@@ -93,10 +74,3 @@ input[type="submit"], input[type="reset"]{
  cursor:pointer;
 }
 
-
-/* Small screens */
-@media (max-width:520px){
- .container{ width: 94%; }
- input[type="text"], select { width:100%; }
- textarea { width:100%; }
-}
