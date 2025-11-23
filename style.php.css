@@ -1,0 +1,26 @@
+/* ---------- CSS för support.php ---------- */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+#support-container {
+    width: 700px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+#support-container h1 {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 36px;
+    margin: 0 0 8px 0;
+}
+
+#support-container h3 {
+    margin-top: 18px;
+}
+
+#support-container b {
+    font-size: 16px;
+}
