@@ -47,9 +47,6 @@ textarea{
 
 
 input[type="submit"], input[type="reset"]{
- padding:6px 12px;
- font-size:14px;
- margin-right:8px;
  border-radius:4px;
  border:1px solid #d87ee2;
  cursor:pointer; /*handen pekar*/
