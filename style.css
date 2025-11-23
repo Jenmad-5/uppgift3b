@@ -1,28 +1,25 @@
-/*grundinställningar för sidan, font för typsnitt, margin för att skapa utrymme och svart färg*/
-body {
-    font-family: "Times New Roman", serif;
-    margin: 20px;
-    color: #000;
+/*grundinställningar för sidan, font för typsnitt, margin*/
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;}
+
+/*container för att styla allt på sidan, width för bredden*/
+#container{
+    width: 480px;
 }
 
-/*containern som håller allt innehåll, width för bredden*/
-#container {
-    width: 480px; 
-}
-
-/*rubriken, font weight bold för fettext*/
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-/*inledande texten, margin för utrymme under och över*/
 #container > p {
     margin: 6px 0 14px;
 }
 
-/*formulärfält, display block för att varje label ska hamna på en egen rad*/
-label {
+/*rubriken, font wight bold för fettext*/
+h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/*formulärfält, display block för att varje label ska hamna på egen rad*/
+label{
     display: block;
     margin-top: 12px;
 }
@@ -36,37 +33,39 @@ textarea {
     padding: 2px;
     width: 200px;
     font-size: 14px;
-    border: 1px solid #000;
+    border: 1px solid black;
     box-sizing: border-box;
 }
 
-/*textarea där den beskrivande texten är, resize vertikal för att användaren ska kunna ändra storleken själv på rutan*/
-textarea {
+/*textarea där den beskrivande texten är resize vertikal för att användaren ska kunna ändra storleken själv på rutan*/
+textarea{
     width: 350px;
     height: 150px;
     resize: vertical;
 }
 
-/*menyn som behöver bockas i(ort)*/
-.radiogrupp {
+/*menyn som behöver bockas i (ort)*/
+.radiogrupp{
     border: none;
     padding: 0;
     margin-top: 12px;
 }
 
-.radiogrupp label {
+.radiogrupp label{
     display: block;
     margin-top: 6px;
 }
 
 /*submit och reset, cursor pointer gör att muspekaren blir till en hand för att förtydliga att rutorna är klickbara*/
-.knappar {
+.knappar{
     margin-top: 10px;
 }
+
 input[type="submit"],
 input[type="reset"] {
     padding: 2px 6px;
     font-size: 14px;
     margin-right: 5px;
-    border: 1px solid #000;
-    cursor: pointer;}
+    border: 1px solid black;
+    cursor: pointer;
+}
