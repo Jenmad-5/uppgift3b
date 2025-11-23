@@ -1,11 +1,11 @@
 <?php
 //support.php visar information från formuläret
 //content type visar på att det är html
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Content-Type: text/html; charset=utf-8");
-    echo "<!doctype html><html lang='sv'><head><meta charset='utf-8'><title>Fel</title></head><body>";
-    echo "<p>Detta dokument ska nås via formuläret. <a href='index.html'>Gå tillbaka</a>.</p></body></html>";
-    exit;
+if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
+   header("Content-Type: text/html; charset=utf-8");
+   echo "<!doctype html><html lang='sv'><head><meta charset='utf-8'><title>Fel</title></head><body>";
+   echo "<p>Detta dokument ska nås via formuläret. <a href='index.html'>Gå tillbaka</a>.</p></body></html>";
+   exit;
 }
 
 //funktion som gör text säkrare att visa i html
@@ -23,31 +23,30 @@ $beskrivning = esc($_POST['beskrivning'] ?? '');
 ?>
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <title>Supportärende</title>
-    <!--länkar till styling i css för php filen-->
-    <link rel="stylesheet" href="style.php.css">
-</head>
-<body>
-<!--container för hela support sidan-->
-<div id="support-container">
+    <head>
+        <meta charset="utf-8">
+        <title>Supportärande</title>
+        <!--länkar till styling i css för php filen-->
+        <link rel="stylesheet" href="style.php.css">
+    </head>
 
-    <h1>Supportärende</h1>
-    <p>Ditt ärende har nu registrerats, vi återkopplar så snart vi kan.</p>
-
-    <h3>Informationen vi fått är följande:</h3>
-    <p>
-<!--denna del visar all information som skickades i formuläret-->
-        <b>Namn:</b> <?php echo $namn; ?>
-        <b>Prioritet:</b> <?php echo $prioritet; ?>
-        <b>Telefon:</b> <?php echo $telefon; ?>
-        <b>Ort:</b> <?php echo $ort; ?>
-        <b>Kategori:</b> <?php echo $kategori; ?>
-        <b>Rubrik:</b> <?php echo $rubrik; ?>
-        <b>Beskrivning:</b> <?php echo nl2br($beskrivning); ?>
-    </p>
-
-</div>
-</body>
-</html>
+    <body>
+        <!--container för hela support sidan-->
+        <div id="support-container">
+            <h1>Supportärende</h1>
+            <p>Ditt ärende har nu registrerats, vi återkopplar så snart vi kan.</p>
+            
+            <!--denna del visar all info som skickas i formuläret-->
+            <h3>Informationen vi fått är följande:</h3>
+            <p>
+                <b>Namn:</b> <?php echo $namn; ?>
+                <b>Prioritet:</b> <?php echo $prioritet; ?>
+                <b>Telefon:</b> <?php echo $telefon; ?>
+                <b>Ort:</b> <?php echo $ort; ?>
+                <b>Kategori:</b> <?php echo $kategori; ?>
+                <b>Rubrik:</b> <?php echo $rubrik; ?>
+                <b>Beskrivning:</b> <?php echo $beskrivning; ?>
+            </p>
+        </div>
+    </body>
+</html>    
