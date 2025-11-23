@@ -23,6 +23,7 @@ padding: 5px;
 
 textarea{
  resize: vertical;
+ max-width: 100%;
  height: 100px;
 }
 
