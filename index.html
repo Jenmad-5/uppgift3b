@@ -2,44 +2,48 @@
 <html lang="sv">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Supportformulär</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <main class="container">
   <h1>Supportformulär</h1>
   <p>Här kan du skicka ett ärende till vår supportavdelning.</p>
-
   <form action="support.php" method="post" class="form">
+
+    <!--ditt namn-->
     <label for="namn">Ditt namn:</label>
     <input id="namn" name="namn" type="text" required>
-
+<!--telefon-->
     <label for="telefon">Telefon:</label>
     <input id="telefon" name="telefon" type="text" required>
 
     <label for="prioritet">Prioritet:</label>
     <select id="prioritet" name="prioritet">
-      <option value="Låg">Låg</option>
-      <option value="Normal">Normal</option>
-      <option value="Hög">Hög</option>
+      <option value="1">Låg</option>
+      <option value="2">Normal</option>
+      <option value="3">Hög</option>
     </select>
 
     <fieldset class="radio-group">
       <legend>Tilldela till ort:</legend>
-      <label><input type="radio" name="ort" value="Göteborg" checked> Göteborg</label>
-      <label><input type="radio" name="ort" value="Stockholm"> Stockholm</label>
-      <label><input type="radio" name="ort" value="Umeå"> Umeå</label>
-      <label><input type="radio" name="ort" value="Luleå"> Luleå</label>
+      <label><input type="radio" name="ort" value="gbg" checked> Göteborg</label>
+
+      <label><input type="radio" name="ort" value="sthlm"> Stockholm</label>
+
+      <label><input type="radio" name="ort" value="ume"> Umeå</label>
+
+      <label><input type="radio" name="ort" value="lule"> Luleå</label>
     </fieldset>
 
     <label for="kategori">Kategori</label>
     <select id="kategori" name="kategori">
-      <option value="Fakturering">Fakturering</option>
-      <option value="Teknik">Teknik</option>
-      <option value="Telefoni">Telefoni</option>
-      <option value="Övrigt">Övrigt</option>
+      <option value="fakt">Fakturering</option>
+      <option value="net">Internet</option>
+      <option value="tel">Telefoni</option>
+      <option value="epost">E-post</option>
     </select>
 
     <label for="rubrik">Rubrik</label>
@@ -49,7 +53,7 @@
     <textarea id="beskrivning" name="beskrivning" rows="8" required></textarea>
 
     <div class="buttons">
-      <input type="submit" value="Submit">
+      <input type="submit" name="skicka" value="Submit">
       <input type="reset" value="Reset">
     </div>
   </form>
