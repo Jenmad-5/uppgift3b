@@ -6,59 +6,59 @@
         <!--link länkar till styling i css-->
         <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
         <div id="container">
             <h1>Supportformulär</h1>
-            <p>Här kan du skicka ett ärande till vår supportavdelning</p>
+            <p>Här kan du skicka ett ärende till vår supportavdelning</p>
             <!--länkar till php filen som visar upp svaret på formuläret. Action är vart informationen hämtas och metod post som används för att det är privata uppgifter som skrivs in i formuläret-->
-            <form action="support.php" method="post" class="form">
-            <!--namn, lable visar genom rubrik vilken information som efterfrågas i svarsrutan-->
-            <!--input för att användaren ska kunna ha något att fylla i och type bestämmer vilken typ av info som ska ifyllas-->
-            <!--name är det som kommer skickas till servern med användarens namn den skriver in-->
-            <!--id för att identifiera fältet-->
-            <!--required betyder att fältet måste fyllas i för att formuläret ska kunna skickas in -->
-            <label for="namn">Ditt namn:</label>
-            <input type="text" name="namn" id="namn" required>
-            <!--tel-->
-            <label for="telefon">Telefon:</label>
-            <input type="text" name="telefon" id="telefon" required>
-            <!--prio, select skapar rullgardinsmeny och option är de olika alternativ som ska finnas i menyn-->
-            <label for="prioritet">Prioritet:</label>
-            <select name="prioritet" id="prioritet">
-                <option value="1">Låg</option>
-                <option value="2">Normal</option>
-                <option value="3">Hög</option>
-            </select>
-            <!--ort, fieldset och radio skapar istället för en rullgardinsmeny en meny där man kan välja endast ett av alternativen med hjälp av att bocka i en rund knapp-->
-            <fieldset class="radiogrupp">
-                <legend>Tilldela till ort:</legend>
-                <label><input type="radio" name="ort" value="gbg">Göteborg</label>
-                <label><input type="radio" name="ort" value="sthlm">Stockholm</label>
-                <label><input type="radio" name="ort" value="ume">Umeå</label>
-                <label><input type="radio" name="ort" value="lule">Luleå</label>
-            </fieldset>
-            <!--kategori-->
-            <label for="kategori">Katergori</label>
-            <select name="kategori" id="kategori">
-                <option value="fakt">Fakturering</option>
-                <option value="net">Internet</option>
-                <option value="tel">Telefoni</option>
-                <option value="epost">E-post</option>
-            </select>
-            <!--rubrik-->
-            <label for="rubrik">Rubrik</label>
-            <input type="text" name="rubrik" id="rubrik" required>
-            <!--beskrivning, textarea är en stor ruta där man kan skriva flera rader vilket skiljer sig från input ovan som bara är en rad-->
-            <label for="beskrivning">Beskrivning</label>
-            <textarea name="beskrivning" id="beskrivning" required></textarea>
-            <div class="knappar">
-            <!--type submit säger att informationen ska skickas-->
-            <input type="submit" name="skicka" value="Submit">
-            <!--type reset säger att informationen ska rensas-->
-            <input type="reset" value="Reset">
-            </div>
-        </form>
-        </div> 
+            <form action="support.php" method="post">
+                <!--namn, lable visar genom rubrik vilken information som efterfrågas i svarsrutan-->
+                <!--input för att användaren ska kunna ha något att fylla i och type bestämmer vilken typ av info som ska ifyllas-->
+                <!--name är det som kommer skickas till servern med användarens namn den skriver in-->
+                <!--id för att identifiera fältet-->
+                <!--required betyder att fältet måste fyllas i för att formuläret ska kunna skickas in-->
+                <label for="namn">Ditt namn:</label>
+                <input type="text" name="namn" id="namn" required>
+                <!--telnr-->
+                <label for="telefon">Telefon:</label>
+                <input type="text" name="telefon" id="telefon" required>
+                <!--prioritet, select skapar en rullgardinsmeny och option är de olika alternativ som ska finnas i menyn-->
+                <label for="prioritet">Prioritet:</label>
+                <select name="prioritet" id="prioritet">
+                    <option value="1">Låg</option>
+                    <option value="2">Normal</option>
+                    <option value="3">Hög</option>
+                </select>
+                <!--ort, fieldset och radio skapar istället för en rullgardinsmeny en meny där man kan välja endast ett av alternativen med hjälp av att bocka i en rund knapp-->
+                <fieldset class="radiogrupp">
+                    <legend>Tilldela till ort:</legend>
+                    <label><input type="radio" name="ort" value="gbg">Göteborg</label>
+                    <label><input type="radio" name="ort" value="sthlm">Stockholm</label>
+                    <label><input type="radio" name="ort" value="ume">Umeå</label>
+                    <label><input type="radio" name="ort" value="lule">Luleå</label>
+                </fieldset>
+                <!--kategori-->
+                <label for="kategori">Kategori</label>
+                <select name="kategori" id="kategori">
+                    <option value="fakt">Fakturering</option>
+                    <option value="net">Internet</option>
+                    <option value="tel">Telefoni</option>
+                    <option value="epost">E-post</option>
+                </select>
+                <!--rubrik-->
+                <label for="rubrik">Rubrik</label>
+                <input type="text" name="rubrik" id="rubrik" required>
+                <!--beskrivning, textarea är en stor ruta där man kan skriva flera rader vilket skiljer sig från input ovan som bara är en rad-->
+                <label for="beskrivning">Beskrivning</label>
+                <textarea name="beskrivning" id="beskrivning" required></textarea>
+                <div class="knappar">
+                    <!--type submit säger att informationen ska skickas-->
+                    <input type="submit" name="skicka" value="Submit">
+                    <!--type reset säger att informationen ska rensas-->
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
     </body>
 </html>
+
