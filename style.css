@@ -15,13 +15,12 @@ body{
  justify-content: center;
 }
 
-
+/*allt på sidan*/
 .container{
  width: var(--content-width);
 }
 
 
-/* Heading like image */
 h1{
  font-family: var(--body-font);
  font-size: 36px;
@@ -64,14 +63,14 @@ textarea{
 
 
 /* Radio group styling */
-.radio-group{
+.radiogrupp{
  margin-top:12px;
  border: none;
  padding: 0;
 }
 
 
-.radio-group label{
+.radiogrupp label{
  display:block;
  font-weight: normal;
  margin-top:6px;
@@ -79,7 +78,7 @@ textarea{
 
 
 /* Buttons */
-.buttons{
+.knappar{
  margin-top:18px;
 }
 

@@ -8,10 +8,11 @@
     </head>
 
     <body>
-        <h1>Supportformulär</h1>
-        <p>Här kan du skicka ett ärande till vår supportavdelning</p>
-        <!--länkar till php filen som visar upp svaret på formuläret. Action är vart informationen hämtas och metod post som används för att det är privata uppgifter som skrivs in i formuläret-->
-        <form action="support.php" method="post">
+        <div id="container">
+            <h1>Supportformulär</h1>
+            <p>Här kan du skicka ett ärande till vår supportavdelning</p>
+            <!--länkar till php filen som visar upp svaret på formuläret. Action är vart informationen hämtas och metod post som används för att det är privata uppgifter som skrivs in i formuläret-->
+            <form action="support.php" method="post" class="form">
             <!--namn, lable visar genom rubrik vilken information som efterfrågas i svarsrutan-->
             <!--input för att användaren ska kunna ha något att fylla i och type bestämmer vilken typ av info som ska ifyllas-->
             <!--name är det som kommer skickas till servern med användarens namn den skriver in-->
@@ -30,7 +31,7 @@
                 <option value="3">Hög</option>
             </select>
             <!--ort, fieldset och radio skapar istället för en rullgardinsmeny en meny där man kan välja endast ett av alternativen med hjälp av att bocka i en rund knapp-->
-            <fieldset>
+            <fieldset class="radiogrupp">
                 <legend>Tilldela till ort:</legend>
                 <label><input type="radio" name="ort" value="gbg">Göteborg</label>
                 <label><input type="radio" name="ort" value="sthlm">Stockholm</label>
@@ -51,10 +52,13 @@
             <!--beskrivning, textarea är en stor ruta där man kan skriva flera rader vilket skiljer sig från input ovan som bara är en rad-->
             <label for="beskrivning">Beskrivning</label>
             <textarea name="beskrivning" id="beskrivning" required></textarea>
+            <div class="knappar">
             <!--type submit säger att informationen ska skickas-->
             <input type="submit" name="skicka" value="Submit">
             <!--type reset säger att informationen ska rensas-->
             <input type="reset" value="Reset">
+            </div>
         </form>
+        </div> 
     </body>
 </html>
