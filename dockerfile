@@ -1,3 +1,4 @@
+#använder dockerfile för att kunna öppna php filerna via webbservern render
 #använd officiell PHP med Apache
 FROM php:8.2-apache
 
