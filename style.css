@@ -1,22 +1,12 @@
 
 body{
- margin: 20px;
  display: flex;
  justify-content: center;
 }
 
-
 h1{
  font-size: 36px;
 }
-
-
-/* Intro paragraph */
-.container > p{
- margin-top: 6px;
- margin-bottom: 14px;
-}
-
 
 /* Form layout */
 label{
@@ -24,25 +14,15 @@ label{
  margin-top: 12px;
 }
 
-
 input[type="text"], select, textarea{
- display:block;
- margin-top:6px;
- padding:6px;
- width:260px;
  box-sizing: border-box;
  font-size:14px;
  border:1px solid #999;
 }
 
-
 textarea{
- width:420px;
- max-width:100%;
- height:150px;
  resize: vertical;
 }
-
 
 /* Radio group styling */
 .radiogrupp{
